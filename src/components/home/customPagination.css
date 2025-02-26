@@ -1,0 +1,21 @@
+.custom-pagination {
+  display: flex;
+  gap: 10px;
+}
+
+.custom-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.custom-bullet:hover,
+.swiper-pagination-bullet-active {
+  background-color: #22c55e; /* Green */
+  opacity: 1;
+  transform: scale(1.2);
+}
