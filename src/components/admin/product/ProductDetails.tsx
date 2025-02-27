@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Heart, PlusCircle, Minus, Plus } from 'lucide-react';
+import {
+  Heart,
+  PlusCircle,
+  Minus,
+  Plus,
+  CheckCircle,
+  Check,
+} from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Banner from '@/components/shared/Banner';
 import { useLocation } from 'react-router-dom';
@@ -33,7 +40,7 @@ export default function ProductDetails() {
 
   const handleAddToCart = () => {
     console.log('clicked add to card button');
-  }
+  };
 
   const handleWishlist = () => {
     toast({
@@ -52,15 +59,16 @@ export default function ProductDetails() {
         ]}
       />
       <Container>
-        {/* <img src={'../../../../public/product-details.png'} alt='' /> */}
-        <div className='mx-auto py-8 max-w-7xl animate-fade-in'>
-          <div className='flex flex-col lg:flex-row gap-8'>
+        <div className='mx-auto py-8 max-w-7xl animate-fade-in dark:text-white/80'>
+          <div className='flex flex-col lg:flex-row gap-8 mb-16'>
             <div className='w-[120px] space-y-6 text-center'>
               {product.productImg.map((image, index) => (
                 <div
-                key={index}
+                  key={index}
                   className={`${
-                    selectedImage === image ? 'bg-gray-50 rounded-lg text-orange-400' : 'grayscale'
+                    selectedImage === image
+                      ? 'dark:bg-gray-900/30 rounded-lg text-primary'
+                      : 'grayscale'
                   }`}
                 >
                   <button
@@ -73,12 +81,9 @@ export default function ProductDetails() {
                       <img
                         src={image}
                         alt={'Cycle1'}
-                        // className=' opacity-50'
-                        // className={`w-3/4 mx-auto${
-                        //   selectedImage === image && 'hidden'
-                        // }`}
-                        className={cn('w-3/4 mx-auto',
-                          selectedImage === image? 'mb-2' : 'opacity-50' 
+                        className={cn(
+                          'w-3/4 mx-auto',
+                          selectedImage === image ? 'mb-2' : 'opacity-50'
                         )}
                       />
                       <small>Spark 700 RC</small>
@@ -91,7 +96,7 @@ export default function ProductDetails() {
               ))}
             </div>
             <div className='lg:w-4/6'>
-              <div className='relative bg-gray-50 rounded-lg overflow-hidden'>
+              <div className='relative light:bg-gray-50 dark:bg-gray-900/30 rounded-lg overflow-hidden'>
                 <div
                   className={`relative cursor-zoom-in transition-transform duration-300 ${
                     isZoomed ? 'scale-110' : 'scale-100'
@@ -113,8 +118,8 @@ export default function ProductDetails() {
                     onClick={() => setSelectedImage(image)}
                     className={`relative rounded-lg overflow-hidden w-24 h-24 transition-all duration-200 ${
                       selectedImage === image
-                        ? 'ring-1 ring-orange-300'
-                        : 'hover:ring-1 hover:ring-orange-100'
+                        ? 'ring-1 ring-primary/30'
+                        : 'hover:ring-1 hover:ring-primary'
                     }`}
                   >
                     <img
@@ -135,7 +140,6 @@ export default function ProductDetails() {
                       IDS SL DROPOUT SYSTEM
                     </h4>
                     <h1 className='text-4xl font-bold mt-2'>{product.name}</h1>
-                    {/* <p className='text-gray-600 mt-4'>{product?.description}</p> */}
                   </div>
 
                   <div>
@@ -145,24 +149,30 @@ export default function ProductDetails() {
 
                   <div className='mt-6 text-sm'>
                     <p>
-                      <span className='font-semibold'>SKU:</span> N/A
+                      <span className='font-semibold'>SKU: {product.sku}</span>{' '}
+                      N/A
                     </p>
                     <p>
                       <span className='font-semibold'>Category:</span>{' '}
                       {product.category}
                     </p>
-                    <Badge className='mt-2 bg-blue-100 text-blue-800 hover:bg-transparent'>
+                    <Badge className='my-3 bg-gray-900/50 text-primary hover:bg-transparent'>
                       Free worldwide shipping on orders over $50
                     </Badge>
-                    <p className='text-muted-foreground mt-2'>
-                      ✔ 30 days easy returns
-                    </p>
-                    <p className='text-muted-foreground'>
-                      ✔ Order before 2.30pm for same day dispatch
-                    </p>
-                    <p className='text-muted-foreground'>
-                      ✔ Order before 2.30pm for same day dispatch
-                    </p>
+                    <ul className='mt-2 space-y-2 text-muted-foreground'>
+                      <li className='flex items-center gap-2'>
+                        <Check className='w-5 h-5 text-primary' />
+                        Hassle-free returns within 30 days.
+                      </li>
+                      <li className='flex items-center gap-2'>
+                        <Check className='w-5 h-5 text-primary' />
+                        Order before 2:30 PM for same-day shipping.
+                      </li>
+                      <li className='flex items-center gap-2'>
+                        <Check className='w-5 h-5 text-primary' />
+                        We're here to help anytime, day or night.
+                      </li>
+                    </ul>
                   </div>
 
                   <div className='flex items-center mt-4 gap-4'>
@@ -188,17 +198,15 @@ export default function ProductDetails() {
                       </Button>
                     </div>
 
-                    <Button onClick={handleAddToCart} className='bg-green-500 hover:bg-green-600 text-white px-4'>
+                    <Button
+                      onClick={handleAddToCart}
+                      className='bg-primary hover:bg-transparent hover:text-primary text-white px-4'
+                    >
                       <PlusCircle className='w-5 h-5' /> Add to Cart
                     </Button>
 
-                    <Button
-                      variant='outline'
-                      onClick={handleWishlist}
-                      className='flex-1 gap-2'
-                    >
+                    <Button onClick={handleWishlist} className='bg-transparent'>
                       <Heart className='w-5 h-5' />
-                      Add to wishlist
                     </Button>
                   </div>
                 </div>

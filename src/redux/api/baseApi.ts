@@ -8,9 +8,10 @@ import {
 } from '@reduxjs/toolkit/query/react';
 import { RootState } from '../store';
 import { logout, setUser } from '../features/auth/authSlice';
+import { base_url } from '@/constants';
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: 'https://cycle-planet-store-server.vercel.app/api',
+  baseUrl: `${base_url}`,
   credentials: 'include',
   prepareHeaders: (headers, { getState }) => {
     const token = (getState() as RootState).auth.token;

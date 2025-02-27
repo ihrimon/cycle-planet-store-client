@@ -35,7 +35,7 @@ const Specification = () => {
           {specifications.map((spec, index) => (
             <TableRow
               key={index}
-              className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
+              className={index % 2 === 0 ? 'bg-gray-50 dark:bg-gray-900/70' : ''}
             >
               <TableCell className='font-medium w-1/3'>{spec.label}</TableCell>
               <TableCell className='text-gray-600'>{spec.value}</TableCell>

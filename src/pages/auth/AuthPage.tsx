@@ -15,9 +15,8 @@ import CustomForm from '@/components/form/CustomForm';
 import CustomInput from '@/components/form/CustomInput';
 import CustomError from '@/components/form/CustomError';
 import customToaster from '@/utils/customToaster';
-
 import {
-  base_uri,
+  base_url,
   loginDefaultValues,
   registerDefaultValues,
 } from '@/constants';
@@ -46,7 +45,7 @@ const AuthPage = () => {
     try {
       if (authType === 'signup') {
         const { data } = await axios.post(
-          `${base_uri}/auth/register`,
+          `${base_url}/auth/register`,
           formData,
           {
             headers: { 'Content-Type': 'application/json' },
@@ -94,7 +93,7 @@ const AuthPage = () => {
 
   return (
     <div className='min-h-screen flex items-center justify-center p-4'>
-      <div className='w-full border max-w-4xl mx-auto grid lg:grid-cols-2 items-center p-8 shadow-sm'>
+      <div className='w-full border border-primary/20 max-w-4xl mx-auto flex items-center justify-between p-8 shadow-sm'>
         <Card className='w-full h-[580px] max-w-md mx-auto lg:mx-0 shadow-none border-0'>
           <CardContent className='pt-6'>
             <div className='mb-8'>
@@ -167,11 +166,10 @@ const AuthPage = () => {
             </div>
           </CardContent>
         </Card>
-        <div className='hidden lg:block'>
+        <div className=''>
           <img
-            src='/auth.jpg'
-            alt='Auth illustration'
-            className='w-full h-[550px] max-w-md mx-auto'
+            src='../../../public/auth.gif'
+            style={{ width: 300, height: 300 }}
           />
         </div>
       </div>

@@ -5,7 +5,7 @@ import CustomInput from '@/components/form/CustomInput';
 import CustomSelect from '@/components/form/CustomSelect';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { FieldValues, SubmitHandler } from 'react-hook-form';
-import { countryOptions, genderOptions } from '@/constants/customer';
+import { countryOptions } from '@/constants/customer';
 import CustomTextarea from '@/components/form/CustomTextarea';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { customerDefaultValues } from '@/constants';
@@ -15,7 +15,6 @@ import { useCreateCustomerMutation } from '@/redux/features/customer/customerApi
 const EditProfile = () => {
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
   const [createCustomer, { isLoading }] = useCreateCustomerMutation();
-
 
   const handleAvatarChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -64,7 +63,7 @@ const EditProfile = () => {
         <CustomForm
           onSubmit={onSubmit}
           defaultValues={customerDefaultValues}
-          resolver={zodResolver(customerSchema)}
+          // resolver={zodResolver(customerSchema)}
           submitLabel='Save Product'
           className='rounded-none'
           isLoading={isLoading}
@@ -79,11 +78,11 @@ const EditProfile = () => {
               <CustomInput type='email' name='email' label='Email' />
               <CustomInput type='text' name='phone' label='Phone' />
               <CustomInput type='date' name='birthDate' label='Birth Date' />
-              <CustomSelect
+              {/* <CustomSelect
                 name='gender'
                 label='Gender'
                 options={genderOptions}
-              />
+              /> */}
             </div>
             <CustomTextarea
               name='bio'
@@ -96,10 +95,26 @@ const EditProfile = () => {
               Billing Address
             </h3>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
-              <CustomInput type='text' name='street' label='Street Address' />
-              <CustomInput type='text' name='city' label='City' />
-              <CustomInput type='text' name='state' label='State' />
-              <CustomInput type='text' name='zipCode' label='Zip Code' />
+              <CustomInput
+                type='text'
+                name='billingAddress.street'
+                label='Street Address'
+              />
+              <CustomInput
+                type='text'
+                name='billingAddress.city'
+                label='City'
+              />
+              <CustomInput
+                type='text'
+                name='billingAddress.state'
+                label='State'
+              />
+              <CustomInput
+                type='text'
+                name='billingAddress.zipCode'
+                label='Zip Code'
+              />
               <CustomSelect
                 name='country'
                 label='Country'
@@ -112,12 +127,28 @@ const EditProfile = () => {
               Shipping Address
             </h3>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
-              <CustomInput type='text' name='street' label='Street Address' />
-              <CustomInput type='text' name='city' label='City' />
-              <CustomInput type='text' name='state' label='State' />
-              <CustomInput type='text' name='zipCode' label='Zip Code' />
+              <CustomInput
+                type='text'
+                name='shippingAddress.street'
+                label='Street Address'
+              />
+              <CustomInput
+                type='text'
+                name='shippingAddress.city'
+                label='City'
+              />
+              <CustomInput
+                type='text'
+                name='shippingAddress.state'
+                label='State'
+              />
+              <CustomInput
+                type='text'
+                name='shippingAddress.zipCode'
+                label='Zip Code'
+              />
               <CustomSelect
-                name='country'
+                name='shippingAddress.country'
                 label='Country'
                 options={countryOptions}
               />
