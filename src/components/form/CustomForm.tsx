@@ -23,7 +23,7 @@ type TCustomFormProps = {
 const CustomForm = ({
   onSubmit,
   children,
-  defaultValues,
+  defaultValues = {},
   submitLabel,
   resolver,
   isLoading,

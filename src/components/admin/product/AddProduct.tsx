@@ -1,7 +1,7 @@
 import CustomForm from '@/components/form/CustomForm';
 import CustomInput from '@/components/form/CustomInput';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { addProductSchema } from '@/schemas/addProduct.schema';
+import { addProductSchema } from '@/schemas/product.schema';
 import CustomSelect from '@/components/form/CustomSelect';
 import {
   brakeTypeOptions,

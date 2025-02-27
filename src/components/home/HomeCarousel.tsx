@@ -1,7 +1,6 @@
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import HomeBanner from './HomeBanner';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
 import banner from '../../../public/banner-bg.png';
 
 export function HomeCarousel() {

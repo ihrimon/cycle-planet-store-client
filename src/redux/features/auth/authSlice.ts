@@ -21,16 +21,12 @@ const authSlice = createSlice({
       state.user = null;
       state.token = null;
     },
-    setLoading: (state, action) => {
-      state.loading = action.payload;
-    },
   },
 });
 
-export const { setUser, logout, setLoading } = authSlice.actions;
+export const { setUser, logout } = authSlice.actions;
 
 export default authSlice.reducer;
 
 export const currentAccessToken = (state: RootState) => state.auth.token;
 export const currentUser = (state: RootState) => state.auth.user;
-export const isLoading = (state: RootState) => state.auth.loading;

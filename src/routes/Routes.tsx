@@ -1,7 +1,5 @@
 import App from '@/App';
 import About from '@/pages/about/About';
-import Login from '@/pages/auth/Login';
-import Register from '@/pages/auth/Register';
 import Contact from '@/pages/contact/Contact';
 import Home from '@/pages/home/Home';
 import News from '@/pages/news/News';
@@ -118,15 +116,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/auth',
-    element: <AuthPage />
-  },
-  {
-    path: '/login',
-    element: <Login />,
-  },
-  {
-    path: '/register',
-    element: <Register />,
+    element: <AuthPage />,
   },
   {
     path: '*',

@@ -1,18 +1,18 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Heart, Menu, ShoppingCart } from 'lucide-react';
+import { Heart, Menu, ShoppingCart, WandSparkles } from 'lucide-react';
 import { useAppSelector } from '@/redux/hook';
 import { currentUser } from '@/redux/features/auth/authSlice';
 import { Profile } from '../profile/Profile';
 import logo from '../../../public/logo.png';
-import Login from '@/pages/auth/Login';
-import Register from '@/pages/auth/Register';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
+import { Button } from '../ui/button';
 
 const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const user = useAppSelector(currentUser);
+  console.log(user);
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -55,7 +55,7 @@ const Navbar = () => {
                 to={link.path}
                 className={`${
                   location.pathname === link.path
-                    ? 'border lg:px-4 lg:py-2 px-2 py-1 rounded-full'
+                    ? 'border border-primary lg:px-4 lg:py-2 px-2 py-1 rounded-full'
                     : 'hover:lg:bg-primary hover:lg:px-3 hover:lg:py-2 rounded-full'
                 }`}
               >
@@ -69,7 +69,7 @@ const Navbar = () => {
       {/* Login Register and Profile */}
       <div className='hidden md:flex items-center gap-3'>
         {user ? (
-          <div className='flex items-center gap-3'>
+          <div className='flex items-center gap-3 text-white'>
             <div className='flex items-center gap-3'>
               <Link to={'/cart'}>
                 <Heart size={20} />
@@ -82,8 +82,11 @@ const Navbar = () => {
           </div>
         ) : (
           <div className='flex items-center gap-3'>
-            <Register />
-            <Login />
+            <Link to={'/auth'}>
+              <Button className='w-[110px] text-secondary text-white hover:bg-transparent bg-primary'>
+                <WandSparkles /> Login Now
+              </Button>
+            </Link>
           </div>
         )}
       </div>
