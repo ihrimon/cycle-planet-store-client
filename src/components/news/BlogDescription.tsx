@@ -1,5 +1,3 @@
-import { Square } from 'lucide-react';
-
 const BlogDescription = () => {
   const visaSteps = [
     'Key Essential Steps to Successfully Navigate and Complete Your Visa Application Process.',

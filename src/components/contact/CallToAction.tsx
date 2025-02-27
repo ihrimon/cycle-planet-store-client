@@ -1,21 +1,5 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { MapPin, Clock, Mail, MapPinned } from 'lucide-react';
 import Phone from './Phone';
 import Container from '../shared/Container';
-
-// interface ContactDetailsProps {
-//   address: {
-//     street: string;
-//     city: string;
-//     country: string;
-//   };
-//   phones: string[];
-//   hours: {
-//     weekday: string;
-//     weekend: string;
-//   };
-//   emails: string[];
-// }
 
 const contactData = {
   address: {

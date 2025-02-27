@@ -50,3 +50,28 @@ export const productDefaultValues = {
     bottleHolder: '',
   },
 };
+
+export const customerDefaultValues = {
+  fullName: '',
+  username: '',
+  email: '',
+  phone: '',
+  profileImage: '',
+  bio: '',
+  // gender: '', 
+  birthDate: '',
+  billingAddress: {
+    street: '',
+    city: '',
+    state: '',
+    zipCode: '',
+    country: '',
+  },
+  shippingAddress: {
+    street: '',
+    city: '',
+    state: '',
+    zipCode: '',
+    country: '',
+  },
+};

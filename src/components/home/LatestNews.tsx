@@ -1,49 +1,40 @@
-import img from '../../../public/news.png';
 
 import { ArrowRight } from 'lucide-react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
 import Container from '../shared/Container';
 
-const features = [
-  {
-    title: 'Double Wall Rims',
-    description:
-      'Maecenas volutpat blandit aliquam etiam erat velit scelerisque feugiat vivamus at augerat',
-  },
-  {
-    title: 'Carbon Steel Frame',
-    description:
-      'Augue neque gravida in fermentum et sollicitudin. Sed id semper risus in hendrerit gravida rutru',
-  },
-  {
-    title: 'Suspension Fork',
-    description:
-      'Blandit aliquam etiam erat velit scelerisque in dictum non conse volutpat sed ctetur',
-  },
-];
+// const features = [
+//   {
+//     title: 'Double Wall Rims',
+//     description:
+//       'Maecenas volutpat blandit aliquam etiam erat velit scelerisque feugiat vivamus at augerat',
+//   },
+//   {
+//     title: 'Carbon Steel Frame',
+//     description:
+//       'Augue neque gravida in fermentum et sollicitudin. Sed id semper risus in hendrerit gravida rutru',
+//   },
+//   {
+//     title: 'Suspension Fork',
+//     description:
+//       'Blandit aliquam etiam erat velit scelerisque in dictum non conse volutpat sed ctetur',
+//   },
+// ];
 
-const inspirations = [
-  {
-    number: '01',
-    text: 'Neque ornare aenean euismod elementum',
-  },
-  {
-    number: '02',
-    text: 'Mi tempus imperdiet nulla malesuada',
-  },
-  {
-    number: '03',
-    text: 'Luctus accumsan tortor posuere ac sequat semper',
-  },
-];
+// const inspirations = [
+//   {
+//     number: '01',
+//     text: 'Neque ornare aenean euismod elementum',
+//   },
+//   {
+//     number: '02',
+//     text: 'Mi tempus imperdiet nulla malesuada',
+//   },
+//   {
+//     number: '03',
+//     text: 'Luctus accumsan tortor posuere ac sequat semper',
+//   },
+// ];
 
 const blogPosts = [
   {

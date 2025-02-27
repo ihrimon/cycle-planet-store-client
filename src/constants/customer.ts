@@ -1,3 +1,5 @@
+import { TGender } from '@/types/customer';
+
 export const genderOptions = [
   { value: 'male', label: 'Male' },
   { value: 'female', label: 'Female' },
@@ -27,3 +29,5 @@ export const countryOptions = [
   { value: 'gb', label: 'United Kingdom' },
   { value: 'us', label: 'United States' },
 ];
+
+export const Gender: TGender[] = ['Male', 'Female', 'Other'];

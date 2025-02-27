@@ -3,7 +3,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Separator } from '@/components/ui/separator';
-import Checkout from './Checkout';
+// import Checkout from './Checkout';
 import Container from '@/components/shared/Container';
 
 const cartItems = [
@@ -187,7 +187,7 @@ const CheckoutDetails = () => {
           </div>
         </form>
         {/* Checkout Component */}
-        <Checkout billingInfo={billingInfo} />
+        {/* <Checkout billingInfo={billingInfo} /> */}
       </div>
     </Container>
   );

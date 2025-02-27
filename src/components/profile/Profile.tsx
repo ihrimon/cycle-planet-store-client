@@ -5,7 +5,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Avatar, AvatarImage } from '../ui/avatar';
+import { Avatar } from '../ui/avatar';
 import Logout from './Logout';
 import { selectedRole } from '@/utils';
 import { Link } from 'react-router-dom';

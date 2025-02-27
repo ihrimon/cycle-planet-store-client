@@ -43,7 +43,7 @@ interface BannerProps {
   className?: string;
 }
 
-const Banner: FC<BannerProps> = ({ title, backgroundImage, className }) => {
+const Banner: FC<BannerProps> = ({ backgroundImage, className }) => {
   return (
     <div
       className={cn(

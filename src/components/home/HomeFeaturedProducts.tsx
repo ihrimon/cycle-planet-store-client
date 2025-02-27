@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, MoveLeft, MoveRight } from 'lucide-react';
-import ProductCard from './ProductCard';
+import React, { useState, useRef} from 'react';
+import { MoveLeft, MoveRight } from 'lucide-react';
 import HomeProductCard from './HomeProductCard';
 import Container from '../shared/Container';
 
@@ -98,7 +97,7 @@ const HomeFeaturedProducts: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+  // const [scrollLeft, setScrollLeft] = useState(0);
   const [dragDistance, setDragDistance] = useState(0);
   const sliderRef = useRef<HTMLDivElement>(null);
   const totalPages = Math.ceil(products.length / PRODUCTS_PER_PAGE);
@@ -114,7 +113,7 @@ const HomeFeaturedProducts: React.FC = () => {
   const handleMouseDown = (e: React.MouseEvent) => {
     setIsDragging(true);
     setStartX(e.pageX - (sliderRef.current?.offsetLeft || 0));
-    setScrollLeft(sliderRef.current?.scrollLeft || 0);
+    // setScrollLeft(sliderRef.current?.scrollLeft || 0);
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {

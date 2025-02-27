@@ -1,67 +1,3 @@
-// import Container from '../shared/Container';
-// import { Separator } from '../ui/separator';
-// import { TestimonialCard } from './TestimonialCard';
-
-// const testimonials = [
-//   {
-//     name: 'Andrew Rathore',
-//     role: 'Executive',
-//     content:
-//       'We are idea generators, goal seekers, creators of unique internet projects. We deliver web technologies.',
-//     image: '../../../public/customer-17.jpg',
-//     rating: 5,
-//   },
-//   {
-//     name: 'Andrew Rathore',
-//     role: 'Executive',
-//     content:
-//       'We are idea generators, seekers, thirsty creators unique internet projects. We deliver technologies.',
-//     image: '../../../public/customer-7.jpg',
-//     rating: 5,
-//   },
-// ];
-
-// const Testimonial = () => {
-//   return (
-//     <Container>
-//       <div className='text-center space-y-2'>
-//         <h3 className='text-green-500 text-xl font-semibold'>Testimonial</h3>
-//         <h1 className='text-3xl font-semibold'>
-//           What The People Thinks{' '}
-//           <span className='text-green-500/50'>Cycle Planet</span>
-//         </h1>
-//       </div>
-//       <div className='flex items-center justify-between mx-[225px] mt-10'>
-//         <div className='flex items-center justify-center gap-6'>
-          // {testimonials.map((item, index) => (
-          //   <div key={index} className='relative flex w-[400px]'>
-          //     <div className='bg-gray-50 pl-6 pr-10 rounded-[10px] py-10 space-y-2'>
-          //       <h3 className='font-semibold w-14'>{item.name}</h3>
-          //       <small>{item.role}</small>
-          //       <Separator className='w-[60px]' />
-
-          //       <p className='text-green-500 text-3xl'>*****</p>
-          //     </div>
-          //     <div className='absolute top-0 bottom-0 ml-[100px] flex items-center gap-3'>
-          //       <img
-          //         src={item.image}
-          //         alt=''
-          //         className='w-[120px] h-[120px] rounded-lg'
-          //       />
-          //       <small>{item.content}</small>
-          //     </div>
-          //   </div>
-          // ))}
-//         </div>
-//       </div>
-//     </Container>
-//   );
-// };
-
-// export default Testimonial;
-
-
-
 import Container from '../shared/Container';
 import { Separator } from '../ui/separator';
 import {
@@ -104,10 +40,10 @@ const Testimonial = () => {
     <Container>
       <div className='mx-12'>
         <div className='text-center space-y-2'>
-          <h3 className='text-green-500 text-xl font-semibold'>Testimonial</h3>
+          <h3 className='text-primary text-xl font-semibold'>Testimonial</h3>
           <h1 className='text-3xl font-semibold'>
             What The People Thinks{' '}
-            <span className='text-green-500/50'>Cycle Planet</span>
+            <span className='text-primary'>Cycle Planet</span>
           </h1>
         </div>
 
@@ -124,7 +60,7 @@ const Testimonial = () => {
                       <h3 className='font-semibold w-14'>{item.name}</h3>
                       <small>{item.role}</small>
                       <Separator className='w-[60px]' />
-                      <p className='text-green-500 text-3xl'>
+                      <p className='text-primary text-3xl'>
                         {'*'.repeat(item.rating)}
                       </p>
                     </div>

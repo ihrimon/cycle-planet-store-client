@@ -1,20 +1,13 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BrickWallIcon, CarTaxiFront, Contact, HelpCircle, Home, Phone } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+import { BrickWallIcon, CarTaxiFront, Contact, Home, Phone } from 'lucide-react';
 import Container from '../shared/Container';
-
-interface FAQCategory {
-  id: string;
-  label: string;
-}
 
 interface FAQItem {
   id: string;
@@ -24,12 +17,12 @@ interface FAQItem {
   icon: ReactNode;
 }
 
-const categories: FAQCategory[] = [
-  { id: 'general', label: 'General' },
-  { id: 'pricing', label: 'Pricing' },
-  { id: 'dashboard', label: 'Dashboard' },
-  { id: 'api', label: 'API' },
-];
+// const categories: FAQCategory[] = [
+//   { id: 'general', label: 'General' },
+//   { id: 'pricing', label: 'Pricing' },
+//   { id: 'dashboard', label: 'Dashboard' },
+//   { id: 'api', label: 'API' },
+// ];
 
 const faqs: FAQItem[] = [
   {

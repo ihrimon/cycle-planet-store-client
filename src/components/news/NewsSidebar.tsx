@@ -4,7 +4,7 @@ import { Badge } from '../ui/badge';
 import { ChartArea, MessageCircle, Search } from 'lucide-react';
 import TrendingCarousel from '../shared/TrendingCarousel';
 import { Input } from '../ui/input';
-import BlogComments from './BlogComments';
+// import BlogComments from './BlogComments';
 import { Separator } from '../ui/separator';
 import BlogDescription from './BlogDescription';
 
@@ -179,7 +179,7 @@ const NewsHome: React.FC = () => {
               quibusdam tempora.
             </p>
           </div>
-          <BlogComments />
+          {/* <BlogComments /> */}
         </div>
 
         {/* Right Section */}

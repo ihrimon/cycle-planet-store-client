@@ -34,7 +34,7 @@ export function BlogPosts() {
       <section className='w-full bg-background py-24 mx-auto'>
         <div>
           <div className='mb-16 text-center'>
-            <span className='mb-4 block text-sm font-medium uppercase tracking-wider text-green-500'>
+            <span className='mb-4 block text-sm font-medium uppercase tracking-wider text-primary'>
               DIRECTLY FROM BLOG
             </span>
             <h2 className='text-4xl font-bold tracking-tight sm:text-5xl'>

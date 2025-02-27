@@ -64,3 +64,6 @@ export const topCustomers: Customer[] = [
     },
   },
 ];
+
+
+export type TGender = 'Male' | 'Female' | 'Other';

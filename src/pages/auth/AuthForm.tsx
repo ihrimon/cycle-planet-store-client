@@ -6,7 +6,7 @@ import CustomInput from '@/components/form/CustomInput';
 import { FieldValues, SubmitHandler } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import customToaster from '@/utils/customToaster';
-import { TError, TUser } from '@/types';
+import { TUser } from '@/types';
 import CustomError from '@/components/form/CustomError';
 import axios from 'axios';
 import {
@@ -54,7 +54,7 @@ export const AuthForm = ({ type }: AuthFormProps) => {
           navigate('/');
         }
       } catch (err) {
-        CustomError(err as TError);
+        CustomError('Something went wrong');
       } finally {
         setIsLoading(false);
       }
@@ -80,7 +80,7 @@ export const AuthForm = ({ type }: AuthFormProps) => {
           navigate('/');
         }
       } catch (err) {
-        CustomError(err as TError);
+        CustomError('Something went wrong');
       } finally {
         setIsLoading(false);
       }

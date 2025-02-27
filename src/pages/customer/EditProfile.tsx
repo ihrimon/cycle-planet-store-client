@@ -1,15 +1,21 @@
 import { useState } from 'react';
 import { Camera } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import CustomForm from '@/components/form/CustomForm';
 import CustomInput from '@/components/form/CustomInput';
 import CustomSelect from '@/components/form/CustomSelect';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { FieldValues, SubmitHandler } from 'react-hook-form';
-import { countryOptions, genderOptions } from '@/constants/customerOption';
+import { countryOptions, genderOptions } from '@/constants/customer';
+import CustomTextarea from '@/components/form/CustomTextarea';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { customerDefaultValues } from '@/constants';
+import { customerSchema } from '@/schemas';
+import { useCreateCustomerMutation } from '@/redux/features/customer/customerApi';
 
 const EditProfile = () => {
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
+  const [createCustomer, { isLoading }] = useCreateCustomerMutation();
+
 
   const handleAvatarChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -21,14 +27,15 @@ const EditProfile = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     console.log('Profile Data:', data);
+    createCustomer(data);
   };
 
   return (
-    <Card className='w-full max-w-4xl mx-auto'>
-      <CardHeader className='text-center py-6'>
-        <CardTitle className='text-2xl'>Edit Profile</CardTitle>
-      </CardHeader>
-      <CardContent>
+    <div className='w-full max-w-5xl mx-auto'>
+      <div className='text-center py-6'>
+        <h1 className='text-3xl text-primary'>Edit Profile</h1>
+      </div>
+      <div>
         <div className='mb-8 flex flex-col items-center'>
           <div className='relative'>
             <Avatar className='h-32 w-32'>
@@ -54,35 +61,71 @@ const EditProfile = () => {
           </p>
         </div>
 
-        <CustomForm onSubmit={onSubmit} submitLabel='Save Changes'>
-          <CustomInput type='text' name='name' label='Full name' />
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
-            <CustomInput type='email' name='email' label='Email' />
-            <CustomInput type='text' name='phone' label='Phone' />
-          </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
-            <CustomInput type='text' name='address' label='Address' />
-            <CustomInput type='text' name='postalCode' label='Postal Code' />
-          </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
-            <CustomInput type='text' name='city' label='City' />
-            <CustomSelect
-              name='country'
-              label='Country'
-              options={countryOptions}
+        <CustomForm
+          onSubmit={onSubmit}
+          defaultValues={customerDefaultValues}
+          resolver={zodResolver(customerSchema)}
+          submitLabel='Save Product'
+          className='rounded-none'
+          isLoading={isLoading}
+        >
+          <div className='border-b pb-8 border-primary'>
+            <h3 className='font-medium text-md text-primary mb-4'>
+              Personal Information
+            </h3>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5'>
+              <CustomInput type='text' name='fullName' label='Full name' />
+              <CustomInput type='text' name='username' label='User name' />
+              <CustomInput type='email' name='email' label='Email' />
+              <CustomInput type='text' name='phone' label='Phone' />
+              <CustomInput type='date' name='birthDate' label='Birth Date' />
+              <CustomSelect
+                name='gender'
+                label='Gender'
+                options={genderOptions}
+              />
+            </div>
+            <CustomTextarea
+              name='bio'
+              label='Biography'
+              placeholder='No bio provided'
             />
           </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
-            <CustomInput type='date' name='birthDate' label='Birth Date' />
-            <CustomSelect
-              name='gender'
-              label='Gender'
-              options={genderOptions}
-            />
+          <div className='border-b pb-8 border-primary'>
+            <h3 className='font-medium text-md text-primary mb-4'>
+              Billing Address
+            </h3>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
+              <CustomInput type='text' name='street' label='Street Address' />
+              <CustomInput type='text' name='city' label='City' />
+              <CustomInput type='text' name='state' label='State' />
+              <CustomInput type='text' name='zipCode' label='Zip Code' />
+              <CustomSelect
+                name='country'
+                label='Country'
+                options={countryOptions}
+              />
+            </div>
+          </div>
+          <div>
+            <h3 className='font-medium text-md text-primary mb-4'>
+              Shipping Address
+            </h3>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
+              <CustomInput type='text' name='street' label='Street Address' />
+              <CustomInput type='text' name='city' label='City' />
+              <CustomInput type='text' name='state' label='State' />
+              <CustomInput type='text' name='zipCode' label='Zip Code' />
+              <CustomSelect
+                name='country'
+                label='Country'
+                options={countryOptions}
+              />
+            </div>
           </div>
         </CustomForm>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 };
 

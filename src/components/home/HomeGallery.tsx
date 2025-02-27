@@ -138,7 +138,7 @@ export function HomeGallery() {
                     className='w-full h-[200px] object-cover transition-transform duration-300 group-hover:scale-105'
                   />
                 </div>
-                <div className='absolute bottom-3 left-3 bg-green-500/50 text-white px-2 py-1 text-sm rounded-md'>
+                <div className='absolute bottom-3 left-3 bg-primary/70 text-white px-2 py-1 text-sm rounded-md'>
                   {product.category}
                 </div>
               </motion.div>

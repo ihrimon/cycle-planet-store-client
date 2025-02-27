@@ -10,15 +10,7 @@ import { Button } from '@/components/ui/button';
 import { useFetchAllProductsQuery } from '@/redux/features/product/productApi';
 import { useState } from 'react';
 import ProductCard from './ProductCard';
-
-interface Product {
-  id: number;
-  title: string;
-  price: number;
-  rating: number;
-  category: string;
-  image: string;
-}
+import { TProduct } from '@/types';
 
 interface ProductGridProps {
   isGridView: boolean;
@@ -34,7 +26,6 @@ const ProductGrid = ({
   const {
     data: productsData,
     isLoading,
-    isFetching,
   } = useFetchAllProductsQuery(undefined);
   const products = productsData?.data?.result || [];
 
@@ -94,7 +85,7 @@ const ProductGrid = ({
             : 'space-y-4'
         }
       >
-        {paginatedProducts.map((product) => (
+        {paginatedProducts.map((product: TProduct) => (
           <ProductCard key={product._id} product={product} />
         ))}
       </div>

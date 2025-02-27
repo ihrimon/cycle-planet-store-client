@@ -1,9 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
 import {
-  ArrowUpRight,
-  ShoppingBag,
-  FileText,
-  DollarSign,
   MoreHorizontal,
 } from 'lucide-react';
 import { Bar } from 'react-chartjs-2';
@@ -18,36 +14,36 @@ import {
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-const stats = [
-  {
-    title: 'Total Revenue',
-    value: '$26,35,262',
-    icon: <DollarSign className='text-blue-500' size={24} />,
-    trend: '20%',
-    trendColor: 'text-blue-400',
-  },
-  {
-    title: 'Total Sales',
-    value: '$56,35,262',
-    icon: <FileText className='text-blue-500' size={24} />,
-    trend: '1.8%',
-    trendColor: 'text-blue-400',
-  },
-  {
-    title: 'Total Products',
-    value: '$4,262',
-    icon: <ShoppingBag className='text-yellow-500' size={24} />,
-    trend: '1.8%',
-    trendColor: 'text-yellow-400',
-  },
-  {
-    title: 'Total Expenses',
-    value: '$35,262',
-    icon: <DollarSign className='text-green-500' size={24} />,
-    trend: '1.2%',
-    trendColor: 'text-green-400',
-  },
-];
+// const stats = [
+//   {
+//     title: 'Total Revenue',
+//     value: '$26,35,262',
+//     icon: <DollarSign className='text-blue-500' size={24} />,
+//     trend: '20%',
+//     trendColor: 'text-blue-400',
+//   },
+//   {
+//     title: 'Total Sales',
+//     value: '$56,35,262',
+//     icon: <FileText className='text-blue-500' size={24} />,
+//     trend: '1.8%',
+//     trendColor: 'text-blue-400',
+//   },
+//   {
+//     title: 'Total Products',
+//     value: '$4,262',
+//     icon: <ShoppingBag className='text-yellow-500' size={24} />,
+//     trend: '1.8%',
+//     trendColor: 'text-yellow-400',
+//   },
+//   {
+//     title: 'Total Expenses',
+//     value: '$35,262',
+//     icon: <DollarSign className='text-green-500' size={24} />,
+//     trend: '1.2%',
+//     trendColor: 'text-green-400',
+//   },
+// ];
 
 const chartData = {
   labels: [

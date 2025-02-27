@@ -1,4 +1,4 @@
-import { ShoppingCart, Heart, Share2, Eye, MoveRight } from 'lucide-react';
+import { ShoppingCart, Heart, Eye, MoveRight } from 'lucide-react';
 import { Button } from '../ui/button';
 import { QuickView } from './QuickView';
 import { useState } from 'react';
@@ -8,7 +8,7 @@ import { toast } from 'sonner';
 import { useAppSelector } from '@/redux/hook';
 import { currentUser } from '@/redux/features/auth/authSlice';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product }: any) => {
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
   const [addToCart, { data: cartData }] = useAddCartMutation();
   const user = useAppSelector(currentUser);

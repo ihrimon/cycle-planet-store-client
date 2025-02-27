@@ -1,9 +1,7 @@
 import {
-  ChevronUp,
   LayoutDashboard,
   ShoppingCart,
   Users,
-  User2,
   ShoppingBag,
   User,
   Logs,
@@ -23,24 +21,11 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '../ui/dropdown-menu';
-import AdminDashboard from '@/lib/admin/AdminDashboard';
-import AdminProducts from '@/lib/admin/AdminProducts';
-// import AdminCategory from '@/pages/admin/AdminCategory';
 import AdminOrders from '@/lib/admin/AdminOrders';
-import AdminCustomers from '@/lib/admin/AdminCustomers';
-// import AdminReviews from '@/pages/admin/AdminReviews';
 import { useAppSelector } from '@/redux/hook';
 import { currentUser } from '@/redux/features/auth/authSlice';
 import CustomerDashboard from '@/pages/customer/CustomerDashboard';
 import CustomerOrder from '@/pages/customer/CustomerOrder';
-// import CustomerReviews from '@/pages/customer/CustomerReviews';
-// import CustomerProfile from '@/pages/customer/EditProfile';
 import { TUser } from '@/types';
 import CustomerBilling from '@/pages/customer/CustomerBilling';
 import AddProduct from '../admin/product/AddProduct';
@@ -49,6 +34,7 @@ import AllCustomers from '../admin/customer/CustomerList';
 import Logout from '../profile/Logout';
 import ProductList from '../admin/product/ProductList';
 import EditProfile from '@/pages/customer/EditProfile';
+import AdminDashboard from '@/lib/admin/AdminDashboard';
 
 const adminItems = [
   {

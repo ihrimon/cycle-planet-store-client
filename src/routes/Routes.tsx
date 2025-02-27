@@ -22,7 +22,6 @@ import AllCustomers from '@/components/admin/customer/CustomerList';
 import ProductList from '@/components/admin/product/ProductList';
 import AddCategory from '@/components/admin/category/AddCategory';
 import ProductDetails from '@/components/admin/product/ProductDetails';
-import ShoppingCart from '@/components/admin/order/ShoppingCart';
 import CheckoutDetails from '@/components/admin/order/CheckoutDetails';
 import Order from '@/components/admin/order/Order';
 import NotFound from '@/pages/notFound/NotFound';
@@ -57,10 +56,6 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />,
-      },
-      {
-        path: '/cart',
-        element: <ShoppingCart />,
       },
       {
         path: '/wish-list',

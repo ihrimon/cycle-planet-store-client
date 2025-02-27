@@ -1,19 +1,18 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Receipt } from 'lucide-react';
 
-interface BillingDetailsProps {
-  name: string;
-  email: string;
-  phone: string;
-  country: string;
-  state: string;
-  streetAddress: string;
-  city: string;
-  postcode: string;
-}
+// interface BillingDetailsProps {
+//   name: string;
+//   email: string;
+//   phone: string;
+//   country: string;
+//   state: string;
+//   streetAddress: string;
+//   city: string;
+//   postcode: string;
+// }
 
-const BillingDetails = ({ billingDetails }: BillingDetailsProps) => {
+const BillingDetails = ({ billingDetails }: any) => {
   const { name, email, streetAddress, phone, city, state, postcode, country } =
     billingDetails;
   return (
