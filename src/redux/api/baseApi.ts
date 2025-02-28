@@ -8,7 +8,7 @@ import {
 } from '@reduxjs/toolkit/query/react';
 import { RootState } from '../store';
 import { logout, setUser } from '../features/auth/authSlice';
-import { base_url } from '@/constants';
+// import { base_url } from '@/constants';
 
 const baseQuery = fetchBaseQuery({
   baseUrl: 'cycle-planet-store-server.vercel.app/api',
