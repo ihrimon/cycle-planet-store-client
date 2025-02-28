@@ -14,37 +14,6 @@ import {
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-// const stats = [
-//   {
-//     title: 'Total Revenue',
-//     value: '$26,35,262',
-//     icon: <DollarSign className='text-blue-500' size={24} />,
-//     trend: '20%',
-//     trendColor: 'text-blue-400',
-//   },
-//   {
-//     title: 'Total Sales',
-//     value: '$56,35,262',
-//     icon: <FileText className='text-blue-500' size={24} />,
-//     trend: '1.8%',
-//     trendColor: 'text-blue-400',
-//   },
-//   {
-//     title: 'Total Products',
-//     value: '$4,262',
-//     icon: <ShoppingBag className='text-yellow-500' size={24} />,
-//     trend: '1.8%',
-//     trendColor: 'text-yellow-400',
-//   },
-//   {
-//     title: 'Total Expenses',
-//     value: '$35,262',
-//     icon: <DollarSign className='text-green-500' size={24} />,
-//     trend: '1.2%',
-//     trendColor: 'text-green-400',
-//   },
-// ];
-
 const chartData = {
   labels: [
     'Jan',
@@ -64,7 +33,7 @@ const chartData = {
     {
       label: 'Income',
       data: [20, 40, 35, 65, 50, 30, 55, 75, 50, 80, 40, 85],
-      backgroundColor: '#4F46E5',
+      backgroundColor: '#83cc16a4',
     },
     {
       label: 'Expenses',

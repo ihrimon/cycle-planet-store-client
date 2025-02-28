@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className='bg-[#1a1f2c1a] text-gray-700'>
+    <footer className='bg-[#1a1f2c] dark:text-white/70'>
       <div className='max-w-7xl mx-auto py-12'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8'>
           <div className='space-y-4'>
             <div className='flex items-center gap-2'>
               <img
-                src='../../../public/logo-3.png'
+                src='https://res.cloudinary.com/do6tvtff8/image/upload/v1740732680/logo_ca9vrq.png'
                 alt='Probike Logo'
               />
             </div>
@@ -47,7 +47,9 @@ const Footer = () => {
 
           {/* Company Links */}
           <div className='space-y-4'>
-            <h3 className='text-xl font-semibold text-white mb-6'>Company</h3>
+            <h3 className='text-xl font-semibold text-white mb-6 hover:underline'>
+              Company
+            </h3>
             <ul className='space-y-3'>
               <li>
                 <Link to='#' className='hover:text-white transition-colors'>
@@ -79,7 +81,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className='space-y-4'>
-            <h3 className='text-xl font-semibold text-white mb-6'>
+            <h3 className='text-xl font-semibold text-white mb-6 hover:underline'>
               Quick Links
             </h3>
             <ul className='space-y-3'>
@@ -113,7 +115,7 @@ const Footer = () => {
 
           {/* Help Center */}
           <div className='space-y-4'>
-            <h3 className='text-xl font-semibold text-white mb-6'>
+            <h3 className='text-xl font-semibold text-white mb-6 hover:underline'>
               Help Center
             </h3>
             <ul className='space-y-3'>
@@ -142,7 +144,7 @@ const Footer = () => {
 
           {/* Opening Hours */}
           <div className='space-y-4'>
-            <h3 className='text-xl font-semibold text-white mb-6'>
+            <h3 className='text-xl font-semibold text-white mb-6 hover:underline'>
               Opening hours
             </h3>
             <ul className='space-y-3'>
@@ -166,19 +168,22 @@ const Footer = () => {
         <div className='mt-12 pt-8 border-t border-gray-800'>
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <p className='text-sm'>
-              Copyright © 2025 <span className='text-green-500'>Pro-bike</span>.
-              All Rights Reserved
+              Copyright © 2025{' '}
+              <span className='text-primary hover:underline'>
+                Cycle Planet Shop
+              </span>
+              . All Rights Reserved
             </p>
             <div className='flex space-x-6 mt-4 md:mt-0'>
               <Link
                 to='#'
-                className='text-sm hover:text-white transition-colors'
+                className='text-sm hover:text-white transition-colors hover:underline'
               >
                 Terms & Conditions
               </Link>
               <Link
                 to='#'
-                className='text-sm hover:text-white transition-colors'
+                className='text-sm hover:text-white transition-colors hover:underline'
               >
                 Privacy
               </Link>

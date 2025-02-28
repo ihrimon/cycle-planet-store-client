@@ -5,7 +5,6 @@ import {
   PlusCircle,
   Minus,
   Plus,
-  CheckCircle,
   Check,
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';

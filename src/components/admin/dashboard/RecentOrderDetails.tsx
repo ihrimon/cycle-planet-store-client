@@ -38,9 +38,9 @@ const RecentOrderDetails = () => {
     <Card className='w-full'>
       <CardHeader className='flex flex-row items-center justify-between'>
         <CardTitle>Recent Order Details</CardTitle>
-        <Button variant='outline' size='sm'>
+        <button className='underline hover:bg-primary hover:px-3 hover:py-1 hover:rounded-md'>
           View All
-        </Button>
+        </button>
       </CardHeader>
       <CardContent>
         <div className='rounded-md border'>

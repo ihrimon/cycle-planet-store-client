@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   Table,
   TableBody,
@@ -7,8 +6,6 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import { Checkbox } from '@/components/ui/checkbox';
 import {
   Select,
   SelectContent,
@@ -18,76 +15,17 @@ import {
 } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
 import { Eye, Pencil, Trash2 } from 'lucide-react';
+import { useFetchAllCustomersQuery } from '@/redux/features/customer/customerApi';
+import { TCustomer } from '@/types/customer';
+import { Skeleton } from '@/components/ui/skeleton';
 
-interface Customer {
-  id: string;
-  avatar: string;
-  name: string;
-  invoiceId: string;
-  status: 'Completed' | 'Pending' | 'Cancel';
-  totalAmount: number;
-  amountDue: number;
-  dueDate: string;
-  paymentMethod: 'Mastercard' | 'Visa' | 'Paypal';
-}
-
-const mockCustomers: Customer[] = [
-  {
-    id: '1',
-    avatar:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&q=80',
-    name: 'Michael A. Miner',
-    invoiceId: '#INV2540',
-    status: 'Completed',
-    totalAmount: 4521,
-    amountDue: 8901,
-    dueDate: '07 Jan, 2023',
-    paymentMethod: 'Mastercard',
-  },
-  {
-    id: '2',
-    avatar:
-      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=32&h=32&q=80',
-    name: 'Theresa T. Brose',
-    invoiceId: '#INV3924',
-    status: 'Cancel',
-    totalAmount: 7836,
-    amountDue: 9902,
-    dueDate: '03 Dec, 2023',
-    paymentMethod: 'Visa',
-  },
-];
 
 function CustomerList() {
-  const [customers] = useState<Customer[]>(mockCustomers);
-  const [selectedCustomers, setSelectedCustomers] = useState<string[]>([]);
+  const { data: customers, isLoading } = useFetchAllCustomersQuery(undefined);
 
-  const getStatusColor = (status: Customer['status']) => {
-    switch (status) {
-      case 'Completed':
-        return 'bg-green-100 text-green-600';
-      case 'Pending':
-        return 'bg-yellow-100 text-yellow-600';
-      case 'Cancel':
-        return 'bg-red-100 text-red-600';
-      default:
-        return 'bg-gray-100 text-gray-600';
-    }
-  };
-
-  const toggleCustomer = (customerId: string) => {
-    setSelectedCustomers((prev) =>
-      prev.includes(customerId)
-        ? prev.filter((id) => id !== customerId)
-        : [...prev, customerId]
-    );
-  };
-
-  const toggleAll = () => {
-    setSelectedCustomers((prev) =>
-      prev.length === customers.length ? [] : customers.map((c) => c.id)
-    );
-  };
+  if (isLoading) {
+    return <Skeleton />;
+  }
 
   return (
     <div className='p-6 space-y-6'>
@@ -105,57 +43,35 @@ function CustomerList() {
         </Select>
       </div>
 
-      <div className=''>
+      <div>
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className='w-12'>
-                <Checkbox
-                  checked={selectedCustomers.length === customers.length}
-                  onCheckedChange={toggleAll}
-                />
-              </TableHead>
-              <TableHead>Customer Name</TableHead>
-              <TableHead>Invoice ID</TableHead>
+              <TableHead>S.I</TableHead>
+              <TableHead className='text-start'>Customer Name</TableHead>
+              <TableHead className='text-start'>Email</TableHead>
               <TableHead>Status</TableHead>
-              <TableHead>Total Amount</TableHead>
-              <TableHead>Amount Due</TableHead>
-              <TableHead>Due Date</TableHead>
-              <TableHead>Payment Method</TableHead>
               <TableHead>Action</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            {customers.map((customer) => (
-              <TableRow key={customer.id}>
-                <TableCell>
-                  <Checkbox
-                    checked={selectedCustomers.includes(customer.id)}
-                    onCheckedChange={() => toggleCustomer(customer.id)}
-                  />
-                </TableCell>
+            {customers?.data?.map((customer: TCustomer, index: number) => (
+              <TableRow key={customer._id}>
+                <TableCell className='text-center'>{index + 1}</TableCell>
                 <TableCell>
                   <div className='flex items-center space-x-3'>
                     <img
-                      src={customer.avatar}
-                      alt={customer.name}
+                      src={customer.profileImage}
+                      alt={customer.fullName}
                       className='h-8 w-8 rounded-full object-cover'
                     />
-                    <span className='font-medium'>{customer.name}</span>
+                    <span className='font-medium'>{customer.fullName}</span>
                   </div>
                 </TableCell>
-                <TableCell>{customer.invoiceId}</TableCell>
+                <TableCell>{customer.email}</TableCell>
+                <TableCell className='text-center'>{customer.status}</TableCell>
                 <TableCell>
-                  <Badge className={getStatusColor(customer.status)}>
-                    {customer.status}
-                  </Badge>
-                </TableCell>
-                <TableCell>${customer.totalAmount.toLocaleString()}</TableCell>
-                <TableCell>${customer.amountDue.toLocaleString()}</TableCell>
-                <TableCell>{customer.dueDate}</TableCell>
-                <TableCell>{customer.paymentMethod}</TableCell>
-                <TableCell>
-                  <div className='flex items-center space-x-2'>
+                  <div className='flex items-center justify-center space-x-2'>
                     <Button variant='ghost' size='icon'>
                       <Eye className='h-4 w-4 text-gray-500' />
                     </Button>

@@ -1,5 +1,4 @@
 import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Heart, Eye, Share2 } from 'lucide-react';
 
 interface Product {
@@ -95,12 +94,11 @@ const FeaturedProducts = () => {
               <p className='mt-2 text-red-500 font-bold text-center'>
                 {product.price}
               </p>
-              <Button
-                className='mt-4 w-full bg-red-500 hover:bg-red-600 transition-colors opacity-0 group-hover:opacity-100'
-                variant='default'
+              <button
+                className='mt-4 w-full bg-red-500 hover:underline transition-colors'
               >
                 ADD TO CART
-              </Button>
+              </button>
             </div>
           </Card>
         ))}

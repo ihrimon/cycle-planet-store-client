@@ -1,4 +1,6 @@
+import { TResponse } from '@/types';
 import { baseApi } from '../../api/baseApi';
+import { TCustomer } from '@/types/customer';
 
 const customerApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
@@ -14,6 +16,10 @@ const customerApi = baseApi.injectEndpoints({
         url: '/customers',
         method: 'GET',
       }),
+      providesTags: ['customers'],
+      transformResponse: (response: TResponse<TCustomer[]>) => {
+        return { data: response.data };
+      },
     }),
     fetchSingleCustomer: builder.query({
       query: (id) => ({

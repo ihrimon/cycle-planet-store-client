@@ -4,6 +4,7 @@ import Container from '../shared/Container';
 import { cn } from '@/lib/utils';
 import { bikeFeatures, reasonToBuy } from '@/constants';
 import { CircleCheckBig } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const BikeFeature = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -31,7 +32,7 @@ export const BikeFeature = () => {
               className='relative'
             >
               <img
-                src='../../../public/6.png'
+                src='https://res.cloudinary.com/do6tvtff8/image/upload/v1740584001/sq8o4bjvytn1yhqnfayb.png'
                 alt='Smart E-Bike'
                 className='abosulte right-[360px] w-full h-auto mt-10'
               />
@@ -58,18 +59,20 @@ export const BikeFeature = () => {
                       'p-6 shadow-sm transition-all rounded-xl',
                       activeSlide === index
                         ? 'bg-primary/50 dark:bg-gray-600/10'
-                        : 'light:bg-white border-b' 
+                        : 'light:bg-white border-b border-gray-100/10 rounded-none'
                     )}
                   >
                     <h3 className='text-xl font-semibold mb-2 transition-all cursor-pointer hover:text-primary'>
                       {feature.title}
                     </h3>
-                    <p className='text-sm'>
-                      {feature.description}
-                    </p>
-                    <button className='mt-4 text-sm font-medium hover:text-primary transition-all duration-300 border-b border-gray-600 hover:border-b-primary'>
+                    <p className='text-sm'>{feature.description}</p>
+                    <Link
+                      to={'/shop'}
+                    >
+                      <button className='mt-4 text-sm font-medium hover:text-primary transition-all duration-300 border-b border-gray-600 hover:border-b-primary'>
                       Explore
                     </button>
+                    </Link>
                   </motion.div>
                 ))}
               </div>

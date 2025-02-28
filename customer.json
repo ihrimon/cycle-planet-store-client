@@ -1,0 +1,149 @@
+[
+  {
+    "fullName": "Alice Johnson",
+    "username": "alice_j",
+    "email": "alice.j@gmail.com",
+    "phone": "315-678-9021",
+    "profileImage": "https://res.cloudinary.com/do6tvtff8/image/upload/v1740718661/customer-7_mil7z3.jpg",
+    "bio": "Cycling enthusiast and adventure lover.",
+    "gender": "Male",
+    "birthDate": "1990-06-15",
+    "billingAddress": {
+      "street": "123 Main St",
+      "city": "New York",
+      "state": "NY",
+      "zipCode": "10001",
+      "country": "USA"
+    },
+    "status": "active",
+    "shippingAddress": {
+      "street": "123 Main St",
+      "city": "New York",
+      "state": "NY",
+      "zipCode": "10001",
+      "country": "USA"
+    },
+    "paymentMethods": "Stripe",
+    "orderHistory": [
+      {
+        "orderId": "ORD001",
+        "date": "2024-02-01",
+        "items": ["Bike Helmet", "Cycling Gloves"],
+        "totalAmount": 120.5,
+        "transactionId": "TXN001",
+        "status": "Completed"
+      }
+    ],
+    "wishlist": ["Mountain Bike", "Cycling Shoes"]
+  },
+  {
+    "fullName": "John Smith",
+    "username": "john_smith",
+    "email": "john@gmail.com",
+    "phone": "987-654-3210",
+    "profileImage": "https://res.cloudinary.com/do6tvtff8/image/upload/v1740718563/customer-8_ew6efz.jpg",
+    "bio": "Love long rides and exploring new trails.",
+    "gender": "Male",
+    "birthDate": "1985-09-20",
+    "billingAddress": {
+      "street": "456 Elm St",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94107",
+      "country": "USA"
+    },
+    "shippingAddress": {
+      "street": "456 Elm St",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94107",
+      "country": "USA"
+    },
+    "status": "active",
+    "paymentMethods": "Stripe",
+    "orderHistory": [
+      {
+        "orderId": "ORD002",
+        "date": "2024-02-05",
+        "items": ["Road Bike", "Water Bottle"],
+        "totalAmount": 950.99,
+        "transactionId": "TXN002",
+        "status": "Shipped"
+      }
+    ],
+    "wishlist": ["Cycling Jersey", "Smart Bike Light"]
+  },
+  {
+    "fullName": "Emma Brown",
+    "username": "emma_b",
+    "email": "emma@gmail.com",
+    "phone": "555-678-9012",
+    "profileImage": "https://res.cloudinary.com/do6tvtff8/image/upload/v1740718563/customer-11_cqqquy.jpg",
+    "bio": "Daily commuter and weekend rider.",
+    "gender": "Female",
+    "birthDate": "2008-04-10",
+    "billingAddress": {
+      "street": "789 Oak St",
+      "city": "Chicago",
+      "state": "IL",
+      "zipCode": "60610",
+      "country": "USA"
+    },
+    "shippingAddress": {
+      "street": "789 Oak St",
+      "city": "Chicago",
+      "state": "IL",
+      "zipCode": "60610",
+      "country": "USA"
+    },
+    "status": "blocked",
+    "paymentMethods": "Stripe",
+    "orderHistory": [
+      {
+        "orderId": "ORD003",
+        "date": "2024-02-10",
+        "items": ["Bike Lock", "LED Bike Light"],
+        "totalAmount": 65.75,
+        "transactionId": "TXN003",
+        "status": "Completed"
+      }
+    ],
+    "wishlist": ["Hybrid Bike", "Bike Rack"]
+  },
+  {
+    "fullName": "Michael Davis",
+    "username": "michael_d",
+    "email": "michael@gmail.com",
+    "phone": "321-555-7890",
+    "profileImage": "https://res.cloudinary.com/do6tvtff8/image/upload/v1740718563/customer-12_p6wwdk.jpg",
+    "bio": "Passionate about mountain biking.",
+    "gender": "Male",
+    "birthDate": "1988-12-25",
+    "billingAddress": {
+      "street": "159 Pine St",
+      "city": "Seattle",
+      "state": "WA",
+      "zipCode": "98101",
+      "country": "USA"
+    },
+    "shippingAddress": {
+      "street": "159 Pine St",
+      "city": "Seattle",
+      "state": "WA",
+      "zipCode": "98101",
+      "country": "USA"
+    },
+    "paymentMethods": "Stripe",
+    "orderHistory": [
+      {
+        "orderId": "ORD004",
+        "date": "2024-02-15",
+        "items": ["Mountain Bike", "Bike Pump"],
+        "totalAmount": 1200.0,
+        "transactionId": "TXN004",
+        "status": "Processing"
+      }
+    ],
+    "wishlist": ["Bike Computer", "Cycling Shorts"]
+  }
+]

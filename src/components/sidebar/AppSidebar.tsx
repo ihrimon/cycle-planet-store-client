@@ -62,7 +62,7 @@ const adminItems = [
     element: <AdminOrders />,
   },
   {
-    title: 'All Customers',
+    title: 'Customers',
     url: '/dashboard/admin/customers/all',
     icon: Users,
     element: <AllCustomers />,
@@ -129,7 +129,7 @@ export function AppSidebar() {
 
   const menuItemsWithActiveState = menuItems.map((item) => ({
     ...item,
-    isActive: location.pathname === item.url, // চেক করা হচ্ছে Active কিনা
+    isActive: location.pathname === item.url, 
   }));
 
   return (
@@ -144,42 +144,41 @@ export function AppSidebar() {
               <div className='flex flex-col h-full'>
                 <div className='flex-1'>
                   {menuItemsWithActiveState.map((item) => (
-                    <div key={item.title}>
-                      <SidebarMenuItem>
-                        <SidebarMenuButton
-                          asChild
-                          className={`${
-                            item.isActive ? 'bg-primary text-white' : ''
-                          } p-4 rounded-md transition duration-300`}
-                        >
-                          <a href={item.url}>
-                            <item.icon />
-                            <span>{item.title}</span>
-                          </a>
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    </div>
+                    <SidebarMenuItem key={item.title}>
+                      <SidebarMenuButton
+                        asChild
+                        className={`${
+                          item.isActive ? 'bg-primary text-white' : ''
+                        } p-4 rounded-md transition duration-300`}
+                      >
+                        <a href={item.url}>
+                          <item.icon />
+                          <span>{item.title}</span>
+                        </a>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
                   ))}
                 </div>
-                <div className='mt-auto'>
+
+                <div className='mt-auto space-y-2'>
                   <SidebarMenuItem>
-                    <SidebarMenuButton
-                      asChild
-                      style={{ paddingTop: '20px', paddingBottom: '20px' }}
-                    >
-                      <a href={'/'}>
-                        <Home />
+                    <SidebarMenuButton asChild className='p-4 rounded-md'>
+                      <a href='/'>
+                        <Home className='mr-2' />
                         <span>Home Page</span>
                       </a>
                     </SidebarMenuButton>
-                    <SidebarMenuButton
-                      asChild
-                      style={{ paddingTop: '20px', paddingBottom: '20px' }}
-                    >
-                      <div className='flex items-center gap-2'>
+                  </SidebarMenuItem>
+
+                  <SidebarMenuItem>
+                    <SidebarMenuButton asChild className='p-4 rounded-md'>
+                      <button
+                        className='flex items-center gap-2'
+                        onClick={Logout}
+                      >
                         <LogOut className='h-5 w-5' />
-                        <Logout />
-                      </div>
+                        <span>Logout</span>
+                      </button>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 </div>

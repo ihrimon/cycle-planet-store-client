@@ -5,7 +5,7 @@ const stats = [
   {
     title: 'Total Revenue',
     value: '$26,35,262',
-    icon: <DollarSign className='text-blue-500' size={24} />,
+    icon: <DollarSign className='text-lime-500' size={24} />,
     trend: '20%',
     trendColor: 'text-blue-400',
   },
@@ -36,7 +36,7 @@ export default function DashboardStats() {
   return (
     <div className='grid grid-cols-1 md:grid-cols-4 gap-4 p-4'>
       {stats.map((stat, index) => (
-        <Card key={index} className='p-4 rounded-xl shadow-lg'>
+        <Card key={index} className='p-4 rounded-xl shadow-lg border border-gray-900/50'>
           <CardContent className='flex flex-col space-y-2'>
             <div className='flex items-center justify-between'>
               <div className='flex items-center space-x-2'>

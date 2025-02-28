@@ -1,6 +1,6 @@
 export * from './auth.ts';
 export * from './product.ts';
-export * from './error.ts';
+export * from './response.ts';
 export * from './form.ts';
 
 

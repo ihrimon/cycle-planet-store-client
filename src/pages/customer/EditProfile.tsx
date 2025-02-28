@@ -63,7 +63,7 @@ const EditProfile = () => {
         <CustomForm
           onSubmit={onSubmit}
           defaultValues={customerDefaultValues}
-          // resolver={zodResolver(customerSchema)}
+          resolver={zodResolver(customerSchema)}
           submitLabel='Save Product'
           className='rounded-none'
           isLoading={isLoading}
