@@ -22,7 +22,7 @@ const CustomInput = ({
             type={type}
             placeholder={placeholder}
             disabled={disabled}
-            className='py-5 shadow-none'
+            className='py-5 shadow-none border border-gray-100/10'
           />
           {error && <small className='text-red-500'>{error.message}</small>}
         </FormItem>

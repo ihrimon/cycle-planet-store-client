@@ -1,39 +1,31 @@
 import {
   Table,
-  TableBody,
-  TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import { Eye, Pencil, Trash2 } from 'lucide-react';
-import { toast } from '@/hooks/use-toast';
-import { recentOrders } from '@/types/order';
-// import { StatusBadge } from '../order/OrderStatus';
 
 const RecentOrderDetails = () => {
-  const handleView = (id: string) => {
-    toast({
-      title: 'View Order',
-      description: `Viewing order ${id}`,
-    });
-  };
-  const handleEdit = (id: string) => {
-    toast({
-      title: 'Edit Order',
-      description: `Editing order ${id}`,
-    });
-  };
-  const handleDelete = (id: string) => {
-    toast({
-      title: 'Delete Order',
-      description: `Deleting order ${id}`,
-      variant: 'destructive',
-    });
-  };
+  // const handleView = (id: string) => {
+  //   toast({
+  //     title: 'View Order',
+  //     description: `Viewing order ${id}`,
+  //   });
+  // };
+  // const handleEdit = (id: string) => {
+  //   toast({
+  //     title: 'Edit Order',
+  //     description: `Editing order ${id}`,
+  //   });
+  // };
+  // const handleDelete = (id: string) => {
+  //   toast({
+  //     title: 'Delete Order',
+  //     description: `Deleting order ${id}`,
+  //     variant: 'destructive',
+  //   });
+  // };
   return (
     <Card className='w-full'>
       <CardHeader className='flex flex-row items-center justify-between'>
@@ -57,7 +49,7 @@ const RecentOrderDetails = () => {
                 <TableHead className='text-right'>ACTION</TableHead>
               </TableRow>
             </TableHeader>
-            <TableBody>
+            {/* <TableBody>
               {recentOrders.map((order) => (
                 <TableRow key={order.item.id}>
                   <TableCell>{order.serialNo}</TableCell>
@@ -102,7 +94,7 @@ const RecentOrderDetails = () => {
                   </TableCell>
                   <TableCell>{order.orderedDate}</TableCell>
                   <TableCell>
-                    {/* <StatusBadge status={order.status} /> */}
+                     <StatusBadge status={order.status} /> 
                   </TableCell>
                   <TableCell>${order.price}</TableCell>
                   <TableCell className='text-right'>
@@ -132,7 +124,7 @@ const RecentOrderDetails = () => {
                   </TableCell>
                 </TableRow>
               ))}
-            </TableBody>
+            </TableBody> */}
           </Table>
         </div>
       </CardContent>

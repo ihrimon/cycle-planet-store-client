@@ -1,25 +1,21 @@
 import TopCategories from '@/components/home/TopCategories';
 import { BikeFeature } from '@/components/home/BikeFeature';
-import ScrollAnimatedSection from '@/components/ScrollAnimatedSection';
 import { Services } from '@/components/home/Services';
 import { BlogPosts } from '@/components/home/BlogPosts';
 import Testimonial from '@/components/home/Testimonial';
 import HomeFeaturedProducts from '../../components/home/HomeFeaturedProducts';
 import { Sponsored } from '@/components/home/Sponsored';
-import { HomeCarousel } from '@/components/home/HomeCarousel';
+import HomeBanner from '@/components/home/HomeBanner';
+import ScrollAnimatedSection from '@/components/shared/ScrollAnimatedSection';
 
 const Home = () => {
   return (
     <div>
-      <HomeCarousel />
-      {/* <CustomSlider /> */}
+      <HomeBanner />
       <Services />
       <ScrollAnimatedSection>
         <BikeFeature />
       </ScrollAnimatedSection>
-      {/* <ScrollAnimatedSection>
-        <Categories />
-      </ScrollAnimatedSection> */}
       <ScrollAnimatedSection>
         <HomeFeaturedProducts />
       </ScrollAnimatedSection>

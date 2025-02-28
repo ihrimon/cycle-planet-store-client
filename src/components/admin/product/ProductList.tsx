@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Eye, Pencil, Trash2, Plus, Coffee } from 'lucide-react';
+import { Eye, Pencil, Trash2, Plus } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import {
   Table,
@@ -26,6 +26,7 @@ import { Link } from 'react-router-dom';
 import customToaster from '@/utils/customToaster';
 import { TProduct } from '@/types';
 import { Skeleton } from '@/components/ui/skeleton';
+import DashboardHeader from '../dashboard/DashboardHeader';
 
 const ProductList = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -77,23 +78,12 @@ const ProductList = () => {
 
   return (
     <div className='mx-auto p-4 md:p-6 space-y-4 md:space-y-6'>
-      {/* Header Section */}
-      <div className='flex flex-col md:flex-row justify-between items-start md:items-center'>
-        <h1 className='text-3xl text-primary font-bold'>
-          Product List
-        </h1>
-        <p className='text-sm text-muted-foreground'>
-          Dashboard / Products / Product List
-        </p>
-      </div>
-
-      <div className='flex items-start md:items-center gap-2 flex-col md:flex-row'>
-        <Coffee className='h-5 w-5 text-primary' />
-        <p className='text-sm text-muted-foreground'>
-          Tip search by SKU Id: Each product is provided with a unique ID, which
-          you can rely on to find the exact product you need.
-        </p>
-      </div>
+      <DashboardHeader
+        heading='Product List'
+        breadcrumb='Dashboard / Products / Product List'
+        content='Tip search by SKU Id: Each product is provided with a unique ID, which
+          you can rely on to find the exact product you need. '
+      />
 
       <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4'>
         <div className='flex items-center gap-2'>

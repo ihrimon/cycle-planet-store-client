@@ -12,7 +12,6 @@ const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const user = useAppSelector(currentUser);
-  console.log(user);
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -23,7 +22,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='max-w-7xl flex items-center justify-between py-4 px-4 lg:px-0 md:px-6 mx-auto top-0 z-50 relative'>
+    <div className='max-w-7xl flex items-center justify-between py-4 pt-5 px-4 lg:px-0 md:px-6 mx-auto top-0 z-50 relative'>
       {/* Logo */}
       <div>
         <Link to={'/'} className='cursor-pointer'>

@@ -8,31 +8,31 @@ import { cn } from '@/lib/utils';
 
 const logos = [
   {
-    src: '../../../public/brand-1.png',
+    src: 'https://res.cloudinary.com/do6tvtff8/image/upload/v1740736683/brand-6_xbbei1.png',
     alt: 'Mountain Biking Logo 1',
   },
   {
-    src: '../../../public/brand-2.png',
+    src: 'https://res.cloudinary.com/do6tvtff8/image/upload/v1740736682/brand-5_wzqfks.png',
     alt: 'Mountain Biking Logo 2',
   },
   {
-    src: '../../../public/brand-3.png',
+    src: 'https://res.cloudinary.com/do6tvtff8/image/upload/v1740736681/brand-4_oozicl.png',
     alt: 'Mountain Biking Logo 3',
   },
   {
-    src: '../../../public/brand-4.png',
+    src: 'https://res.cloudinary.com/do6tvtff8/image/upload/v1740736680/brand-3_iqa6ic.png',
     alt: 'Mountain Biking Logo 4',
   },
   {
-    src: '../../../public/brand-5.png',
+    src: 'https://res.cloudinary.com/do6tvtff8/image/upload/v1740736680/brand-2_rskmd1.png',
     alt: 'Mountain Biking Logo 5',
   },
   {
-    src: '../../../public/brand-6.png',
+    src: 'https://res.cloudinary.com/do6tvtff8/image/upload/v1740736680/brand-1_jevqdr.png',
     alt: 'Mountain Biking Logo 6',
   },
   {
-    src: '../../../public/brand-7.png',
+    src: 'https://res.cloudinary.com/do6tvtff8/image/upload/v1740736679/brand-7_hr72nk.png',
     alt: 'Mountain Biking Logo 6',
   },
 ];

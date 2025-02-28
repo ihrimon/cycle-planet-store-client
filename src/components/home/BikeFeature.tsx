@@ -32,7 +32,7 @@ export const BikeFeature = () => {
               className='relative'
             >
               <img
-                src='https://res.cloudinary.com/do6tvtff8/image/upload/v1740584001/sq8o4bjvytn1yhqnfayb.png'
+                src='https://res.cloudinary.com/do6tvtff8/image/upload/v1740750386/06_l92fs3.png'
                 alt='Smart E-Bike'
                 className='abosulte right-[360px] w-full h-auto mt-10'
               />
@@ -66,12 +66,10 @@ export const BikeFeature = () => {
                       {feature.title}
                     </h3>
                     <p className='text-sm'>{feature.description}</p>
-                    <Link
-                      to={'/shop'}
-                    >
+                    <Link to={'/shop'}>
                       <button className='mt-4 text-sm font-medium hover:text-primary transition-all duration-300 border-b border-gray-600 hover:border-b-primary'>
-                      Explore
-                    </button>
+                        Explore
+                      </button>
                     </Link>
                   </motion.div>
                 ))}

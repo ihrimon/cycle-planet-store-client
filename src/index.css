@@ -34,8 +34,8 @@
     --sidebar-accent: 220 14.3% 95.9%;
     --sidebar-accent-foreground: 210 25% 12%;
     --sidebar-ring: 84 80% 40%;
-    --border:  83 53% 85%;
-    --input:  83 53% 85%;
+    --border: 83 53% 85%;
+    --input: 83 53% 85%;
     --sidebar-border: 83 53% 85%;
   }
 
@@ -69,9 +69,9 @@
     --sidebar-accent: 210 20% 15%;
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-ring: 84 80% 40%;
-    --border:  83 53% 85%;
-    --input:  83 53% 85%;
-    --sidebar-border:  83 53% 85%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --sidebar-border: 83 53% 85%;
   }
 }
 
@@ -107,20 +107,23 @@ body {
 }
 
 .light .table-row-bg {
-  background-color: #f8fbf37a
+  background-color: #f8fbf37a;
 }
 
-/* .dark .table-row-bg {
-  background-color: #293355
-} */
-
-
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
+/* heading text styles */
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
   }
-  body {
-    @apply bg-background text-foreground;
+  50% {
+    background-position: 100% 50%;
   }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% auto;
+  animation: gradient-move 2.5s linear infinite;
 }

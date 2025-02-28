@@ -93,13 +93,13 @@ const AuthPage = () => {
 
   return (
     <div className='min-h-screen flex items-center justify-center p-4'>
-      <div className='w-full border border-primary/20 max-w-4xl mx-auto flex items-center justify-between p-8 shadow-sm'>
+      <div className='w-full max-w-4xl mx-auto flex items-center justify-between p-8 shadow-sm'>
         <Card className='w-full h-[580px] max-w-md mx-auto lg:mx-0 shadow-none border-0'>
           <CardContent className='pt-6'>
             <div className='mb-8'>
-              <div className='bg-gray-600 mx-auto p-6 rounded-lg'>
+              <div className='bg-gray-700/20 mx-auto p-6 rounded-lg'>
                 <img src='/logo.png' alt='Logo' className='h-12 mb-4' />
-                <p className='text-white'>
+                <p className='text-white text-sm'>
                   Ride the Future, Explore with Confidence 😄!
                 </p>
               </div>
@@ -166,10 +166,11 @@ const AuthPage = () => {
             </div>
           </CardContent>
         </Card>
-        <div className=''>
+        <div>
           <img
-            src='../../../public/auth.gif'
-            style={{ width: 300, height: 300 }}
+            src='https://res.cloudinary.com/do6tvtff8/image/upload/v1740747788/auth_fyvtr9.gif'
+            alt='auth-image'
+            style={{ width: 250, height: 250 }}
           />
         </div>
       </div>
