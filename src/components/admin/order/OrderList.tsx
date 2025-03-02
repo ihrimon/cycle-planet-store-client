@@ -62,7 +62,7 @@ function OrderList() {
   const getStatusColor = (status: Order['status']) => {
     switch (status) {
       case 'Success':
-        return 'bg-green-100 text-green-600';
+        return 'bg-green-100 text-lime-600';
       case 'Pending':
         return 'bg-yellow-100 text-yellow-600';
       case 'Cancel':

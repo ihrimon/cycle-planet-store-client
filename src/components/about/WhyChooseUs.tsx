@@ -1,44 +1,51 @@
-import { Settings } from 'lucide-react';
 import Container from '../shared/Container';
 import { motion } from 'framer-motion';
-
+import {
+  Settings,
+  Bike,
+  Truck,
+  CreditCard,
+  Wrench,
+  Users,
+} from 'lucide-react';
 const WhyChooseUs = () => {
+
   const items = [
     {
-      icon: <Settings />,
-      title: 'Strong Service',
+      icon: <Bike size={18} />,
+      title: 'High-Quality Products',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo libero eaque eum iste consequuntur',
+        'Premium bicycles and accessories from trusted global and local brands.',
     },
     {
-      icon: <Settings />,
-      title: 'Strong Service',
+      icon: <Wrench size={18} />,
+      title: 'Custom Bike Builder',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo libero eaque eum iste consequuntur',
+        'Customize your bike by selecting frame, gears, tires, and more.',
     },
     {
-      icon: <Settings />,
-      title: 'Strong Service',
+      icon: <Truck size={18} />,
+      title: 'Fast & Secure Delivery',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo libero eaque eum iste consequuntur',
+        'Get your bike delivered quickly and track your order in real-time.',
     },
     {
-      icon: <Settings />,
-      title: 'Strong Service',
+      icon: <CreditCard size={18} />,
+      title: 'Flexible Payment Options',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo libero eaque eum iste consequuntur',
+        'Pay with Stripe, bKash, Nagad, Rocket, or Credit/Debit Cards.',
     },
     {
-      icon: <Settings />,
-      title: 'Strong Service',
+      icon: <Users size={18} />,
+      title: 'Exclusive Membership',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo libero eaque eum iste consequuntur',
+        'Join our loyalty program and get special offers & cycling tips.',
     },
     {
-      icon: <Settings />,
-      title: 'Strong Service',
+      icon: <Settings size={18} />,
+      title: 'Bike Servicing & Repair',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo libero eaque eum iste consequuntur',
+        'Book online for maintenance & repair services at your convenience.',
     },
   ];
 
@@ -46,21 +53,26 @@ const WhyChooseUs = () => {
     <Container>
       <div className='mx-auto'>
         <div>
-          <h1 className='text-center font-bold text-3xl text-green-500 mb-6'>
+          <h1 className='text-center font-bold text-4xl text-primary mb-8'>
             Why Choose Us
           </h1>
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
           <div>
-            <img src='../../../public/5.png' alt='' className='object-cover' />
+            <img
+              src='https://res.cloudinary.com/do6tvtff8/image/upload/v1740587415/i4y4xo7g5dqobgnqzve8.png'
+              alt=''
+              className='object-cover w-[70%] pl-16 pt-12'
+            />
           </div>
-          <div className='grid grid-cols-2 gap-4'>
+          <div className='grid grid-cols-2 gap-6'>
             {items.map((item, index) => (
               <motion.div
                 key={index}
-                className='relative p-4 space-y-3 rounded-lg bg-gray-50 overflow-hidden'
+                className='p-4 space-y-3 rounded-md overflow-hidden bg-gray-50 dark:bg-gray-700/20'
                 whileHover={{
-                  background: 'linear-gradient(to right, #bbf7d0, #f0fdf4)',
+                  background:
+                    'linear-gradient(100deg, #84cc16 0%, #1a2430 100%)',
                   zIndex: 10,
                   scale: 1.1,
                 }}
@@ -70,7 +82,7 @@ const WhyChooseUs = () => {
                   <span>{item.icon}</span>
                   <h3 className='font-semibold text-lg'>{item.title}</h3>
                 </div>
-                <p className='text-sm'>{item.description}</p>
+                <p className='text-sm text-muted-foreground hover:text-white'>{item.description}</p>
               </motion.div>
             ))}
           </div>

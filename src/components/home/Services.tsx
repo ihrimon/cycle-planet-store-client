@@ -1,30 +1,37 @@
-import { Settings2 } from 'lucide-react';
+import {
+  Bike,
+  Mountain,
+  Leaf,
+  BellElectric,
+  Rotate3D,
+  BinaryIcon,
+} from 'lucide-react';
 
 export const Services = () => {
   const services = [
     {
-      icon: <Settings2 />,
+      icon: <Mountain />,
       category: 'Mountain',
     },
     {
-      icon: <Settings2 />,
-      category: 'Mountain',
+      icon: <Rotate3D />,
+      category: 'Road',
     },
     {
-      icon: <Settings2 />,
-      category: 'Mountain',
+      icon: <Bike />,
+      category: 'Hybrid',
     },
     {
-      icon: <Settings2 />,
-      category: 'Mountain',
+      icon: <BinaryIcon />,
+      category: 'BMX',
     },
     {
-      icon: <Settings2 />,
-      category: 'Mountain',
+      icon: <BellElectric />,
+      category: 'Electric',
     },
     {
-      icon: <Settings2 />,
-      category: 'Mountain',
+      icon: <Leaf />,
+      category: 'Gravel',
     },
   ];
 
@@ -35,7 +42,7 @@ export const Services = () => {
           {services.map((item, index) => (
             <div
               key={index}
-              className='flex items-center mx-6 gap-6 border rounded-lg p-6'
+              className='grid grid-cols-1 lg:grid-cols-2 rounded-lg p-6'
             >
               <div className='flex items-center gap-3'>
                 <span>{item.icon}</span>

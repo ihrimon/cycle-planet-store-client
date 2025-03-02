@@ -127,3 +127,23 @@ body {
   background-size: 200% auto;
   animation: gradient-move 2.5s linear infinite;
 }
+
+/* custom badge border gradient */
+.button-gradient {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  background-color: black;
+}
+
+.button-gradient::before {
+  content: "";
+  position: absolute;
+  inset: -3px; /* বর্ডারের জায়গা নির্ধারণ */
+  z-index: -1;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+}

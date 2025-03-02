@@ -3,7 +3,7 @@ import { BikeFeature } from '@/components/home/BikeFeature';
 import { Services } from '@/components/home/Services';
 import { BlogPosts } from '@/components/home/BlogPosts';
 import Testimonial from '@/components/home/Testimonial';
-import HomeFeaturedProducts from '../../components/home/HomeFeaturedProducts';
+// import HomeFeaturedProducts from '../../components/home/HomeFeaturedProducts';
 import { Sponsored } from '@/components/home/Sponsored';
 import HomeBanner from '@/components/home/HomeBanner';
 import ScrollAnimatedSection from '@/components/shared/ScrollAnimatedSection';
@@ -16,9 +16,9 @@ const Home = () => {
       <ScrollAnimatedSection>
         <BikeFeature />
       </ScrollAnimatedSection>
-      <ScrollAnimatedSection>
+      {/* <ScrollAnimatedSection>
         <HomeFeaturedProducts />
-      </ScrollAnimatedSection>
+      </ScrollAnimatedSection> */}
       <ScrollAnimatedSection>
         <TopCategories />
       </ScrollAnimatedSection>

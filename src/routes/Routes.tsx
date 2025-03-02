@@ -19,7 +19,7 @@ import CustomerWishlist from '@/pages/customer/CustomerWishlist';
 import AddProduct from '@/components/admin/product/AddProduct';
 import CategoryList from '@/components/admin/category/CategoriesList';
 import AllCustomers from '@/components/admin/customer/CustomerList';
-import ProductList from '@/components/admin/product/ProductList';
+// import ProductList from '@/components/admin/product/ProductList';
 import AddCategory from '@/components/admin/category/AddCategory';
 import ProductDetails from '@/components/admin/product/ProductDetails';
 import CheckoutDetails from '@/components/admin/order/CheckoutDetails';
@@ -81,7 +81,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <AdminDashboard /> },
       // { path: 'products', element: <AdminProducts /> },
-      { path: 'products', element: <ProductList /> },
+      // { path: 'products', element: <ProductList /> },
       { path: 'products/add-product', element: <AddProduct /> },
       // { path: 'category', element: <AdminCategory /> },
       { path: 'category/list', element: <CategoryList /> },

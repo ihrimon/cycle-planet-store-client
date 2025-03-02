@@ -1,6 +1,6 @@
 import {
   LayoutDashboard,
-  ShoppingCart,
+  // ShoppingCart,
   Users,
   ShoppingBag,
   User,
@@ -32,7 +32,7 @@ import AddProduct from '../admin/product/AddProduct';
 import AllCustomers from '../admin/customer/CustomerList';
 // import Reviews from '../admin/reviews/ClientReviews';
 import Logout from '../profile/Logout';
-import ProductList from '../admin/product/ProductList';
+// import ProductList from '../admin/product/ProductList';
 import EditProfile from '@/pages/customer/EditProfile';
 import AdminDashboard from '@/lib/admin/AdminDashboard';
 
@@ -43,12 +43,12 @@ const adminItems = [
     icon: LayoutDashboard,
     element: <AdminDashboard />,
   },
-  {
-    title: 'Product List',
-    url: '/dashboard/admin/products',
-    icon: ShoppingCart,
-    element: <ProductList />,
-  },
+  // {
+  //   title: 'Product List',
+  //   url: '/dashboard/admin/products',
+  //   icon: ShoppingCart,
+  //   element: <ProductList />,
+  // },
   {
     title: 'Add Product',
     url: '/dashboard/admin/products/add-product',

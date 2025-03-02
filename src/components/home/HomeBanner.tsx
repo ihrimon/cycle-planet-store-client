@@ -14,22 +14,23 @@ const HomeBanner = () => {
   return (
     <div>
       {location.pathname === '/' && <Navbar />}
-      <div className='max-w-[1280px] mx-auto items-center pt-[60px] pb-12'>
-        <div className='flex justify-between items-center py-4'>
-          <div className='space-y-10 text-white text-start'>
+      <div className='max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pt-[60px] pb-12'>
+        <div className='flex flex-col-reverse lg:flex-row justify-between items-center py-4 gap-10 lg:gap-0'>
+          {/* Left Content */}
+          <div className='space-y-10 text-white text-center lg:text-start'>
             <HomeHeadline />
-            <div className='flex gap-6 items-center'>
-              <Button className='hover:border hover:bg-transparent'>
+            <div className='flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center lg:justify-start'>
+              <Button className='hover:border hover:bg-transparent w-full sm:w-auto'>
                 Explore Products
               </Button>
 
-              {/* video content */}
+              {/* Video Content */}
               <Dialog open={open} onOpenChange={setOpen}>
                 <DialogTrigger asChild>
-                  <div className='flex items-center justify-center cursor-pointer gap-5'>
+                  <div className='flex items-center justify-center cursor-pointer gap-4 sm:gap-5'>
                     <Button
                       variant={'outline'}
-                      className='border-none relative w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg hover:bg-lime-600 transition-all duration-200 hover:shadow-xl'
+                      className='border-none relative w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg hover:bg-lime-600 transition-all duration-200 hover:shadow-xl'
                       aria-label='Play'
                     >
                       <div>
@@ -37,7 +38,7 @@ const HomeBanner = () => {
                         <span className='absolute -inset-3 rounded-full bg-primary/20 animate-pulse'></span>
                       </div>
                     </Button>
-                    <p>Watch RC Prod</p>
+                    <p className='text-sm sm:text-base'>Watch RC Prod</p>
                   </div>
                 </DialogTrigger>
                 <DialogContent className='max-w-2xl p-0'>
@@ -56,11 +57,13 @@ const HomeBanner = () => {
             </div>
           </div>
 
-          <div>
+          {/* Right Content */}
+          <div className='hidden lg:block'>
             <CustomTooltip />
             <img
               src='https://res.cloudinary.com/do6tvtff8/image/upload/v1740769592/banner-cycle_nz5pqi.png'
               alt='Banner Cycle'
+              className='max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg'
             />
           </div>
         </div>

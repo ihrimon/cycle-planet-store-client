@@ -66,7 +66,7 @@ const HomeProductCard: React.FC<ProductCardProps> = ({
       </h3>
       <div className='flex gap-1 mb-2'>{renderStars()}</div>
       <div className='flex items-center gap-2 mb-3'>
-        <span className='text-lg font-semibold text-green-600'>
+        <span className='text-lg font-semibold text-lime-600'>
           ${price.toFixed(2)}
         </span>
         {originalPrice && (

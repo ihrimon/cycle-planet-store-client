@@ -1,3 +1,4 @@
+import { TProduct, TResponse } from '@/types';
 import { baseApi } from '../../api/baseApi';
 
 const productApi = baseApi.injectEndpoints({
@@ -15,6 +16,9 @@ const productApi = baseApi.injectEndpoints({
         method: 'GET',
       }),
       providesTags: ['product'],
+      transformResponse: (response: TResponse<TProduct[]>) => {
+              return { data: response.data };
+            },
     }),
     fetchSingleProduct: builder.query({
       query: (id) => ({

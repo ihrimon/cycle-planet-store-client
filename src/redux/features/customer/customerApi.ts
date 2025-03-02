@@ -16,7 +16,7 @@ const customerApi = baseApi.injectEndpoints({
         url: '/customers',
         method: 'GET',
       }),
-      providesTags: ['customers'],
+      providesTags: ['customer'],
       transformResponse: (response: TResponse<TCustomer[]>) => {
         return { data: response.data };
       },

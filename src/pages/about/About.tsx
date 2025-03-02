@@ -1,6 +1,6 @@
 import AboutUs from '@/components/about/AboutUs';
-import Gallery from '@/components/about/Gallery';
-import { UserTypeSelection } from '@/components/about/UserTypeSection';
+import CoreValues from '@/components/about/CoreValues';
+// import Gallery from '@/components/about/Gallery';
 import WhyChooseUs from '@/components/about/WhyChooseUs';
 import Banner from '@/components/shared/Banner';
 
@@ -13,8 +13,8 @@ const About = () => {
       />
       <AboutUs />
       <WhyChooseUs />
-      <UserTypeSelection />
-      <Gallery />
+      <CoreValues />
+      {/* <Gallery /> */}
     </div>
   );
 };

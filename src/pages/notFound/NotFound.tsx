@@ -10,7 +10,10 @@ const NotFound = () => {
           404
         </div>
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-          <img src='../../../public/bird.gif' alt='bird' />
+          <img
+            src='https://res.cloudinary.com/do6tvtff8/image/upload/v1740875772/bird_fwf9lh.gif'
+            alt='bird'
+          />
         </div>
       </div>
 

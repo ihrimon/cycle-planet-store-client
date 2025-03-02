@@ -11,7 +11,7 @@ import { logout, setUser } from '../features/auth/authSlice';
 // import { base_url } from '@/constants';
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: 'cycle-planet-store-server.vercel.app/api',
+  baseUrl: 'http://localhost:8000/api',
   credentials: 'include',
   prepareHeaders: (headers, { getState }) => {
     const token = (getState() as RootState).auth.token;
@@ -68,6 +68,6 @@ const baseQueryWithRefreshToken: BaseQueryFn<
 export const baseApi = createApi({
   reducerPath: 'baseApi',
   baseQuery: baseQueryWithRefreshToken,
-  tagTypes: ['product', 'customers'],
+  tagTypes: ['product', 'customer'],
   endpoints: () => ({}),
 });

@@ -44,7 +44,7 @@ const ProductCard = ({
           </span>
         </div>
         <Button
-          className='mt-4 w-full bg-green-500 transition-colors hover:bg-red-600'
+          className='mt-4 w-full bg-primary transition-colors hover:bg-red-600'
         >
           Add to Cart
         </Button>

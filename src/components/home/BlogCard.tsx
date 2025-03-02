@@ -52,8 +52,8 @@ export function BlogCard({
         </div>
         <h3 className='text-2xl font-semibold leading-tight'>{title}</h3>
         <Link to={'/news'} className='flex items-center  gap-3 font-medium'>
-          <p className='hover:underline hover:text-green-500'>Read More</p>
-          <MoveRight className='transition-transform group-hover/btn:translate-x-1  hover:text-green-500' />
+          <p className='hover:underline hover:text-primary'>Read More</p>
+          <MoveRight className='transition-transform group-hover/btn:translate-x-1  hover:text-primary' />
         </Link>
       </div>
     </div>

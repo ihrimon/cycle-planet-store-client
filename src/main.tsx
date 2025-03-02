@@ -10,6 +10,7 @@ import { persistor, store } from './redux/store.ts';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Toaster } from '@/components/ui/toaster.tsx';
 import { TooltipProvider } from './components/ui/tooltip.tsx';
+import GoToTop from './components/shared/GoToTop.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')!).render(
           <Toast richColors />
           </TooltipProvider>
           <Toaster />
+          <GoToTop />
         </PersistGate>
       </Provider>
     </ThemeProvider>

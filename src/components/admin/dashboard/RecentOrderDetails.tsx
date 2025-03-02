@@ -71,7 +71,7 @@ const RecentOrderDetails = () => {
                     </div>
                   </TableCell>
                   <TableCell>
-                    <span className='text-green-600'>{order.customerId}</span>
+                    <span className='text-lime-600'>{order.customerId}</span>
                   </TableCell>
                   <TableCell>
                     <div className='flex items-center gap-3'>

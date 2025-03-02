@@ -36,7 +36,7 @@ const categories: Category[] = [
     title: 'Personal Development',
     icon: <Code className='h-6 w-6' />,
     bgColor: 'bg-[#E5F5E7]',
-    iconColor: 'text-green-500',
+    iconColor: 'text-primary',
   },
   {
     title: 'Health & Fitness',

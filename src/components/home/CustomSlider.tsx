@@ -52,7 +52,7 @@ const CustomSlider = () => {
                   {slide.description}
                 </p>
                 <div className='flex gap-4'>
-                  <button className='bg-green-500 text-white px-6 py-2 rounded-lg'>
+                  <button className='bg-primary text-white px-6 py-2 rounded-lg'>
                     Learn More
                   </button>
                   <button className='border border-gray-300 text-white px-6 py-2 rounded-lg'>
